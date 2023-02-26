@@ -4,8 +4,8 @@
   "private": false,
   "description": "Centers a DOM element",
   "author": "Aihara",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "dist/index.ts",
+  "module": "dist/index.ts",
   "files": [
     "dist",
     "README.md"
