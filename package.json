@@ -1,11 +1,11 @@
 {
   "name": "center-me",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "description": "Centers a DOM element",
   "author": "Aihara",
-  "main": "dist/index.ts",
-  "module": "dist/index.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "files": [
     "dist",
     "README.md"
@@ -35,10 +35,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "rm -rf dist && cross-env NODE_ENV=production babel src/lib --out-dir dist --copy-files",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "rm -rf dist/ && prettier --write src/ && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
   },
   "eslintConfig": {
     "extends": [
