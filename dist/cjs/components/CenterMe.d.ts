@@ -3,5 +3,5 @@ interface IProps {
     children: JSX.Element;
     backdropColor?: string;
 }
-declare const CenterMe: FunctionComponent<IProps>;
-export default CenterMe;
+export declare const CenterMe: FunctionComponent<IProps>;
+export {};

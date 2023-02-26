@@ -1,11 +1,12 @@
 import { CSSProperties, FunctionComponent } from "react";
+import React from "react";
 
 interface IProps {
   children: JSX.Element;
   backdropColor?: string;
 }
 
-const CenterMe: FunctionComponent<IProps> = ({
+export const CenterMe: FunctionComponent<IProps> = ({
   children,
   backdropColor = "inherit",
 }) => {
@@ -23,5 +24,3 @@ const CenterMe: FunctionComponent<IProps> = ({
 
   return <div style={styles}>{children}</div>;
 };
-
-export default CenterMe;
